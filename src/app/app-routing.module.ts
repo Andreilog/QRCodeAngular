@@ -3,8 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { UrlListModule } from './url-list/url-list.module';
 
 const routes: Routes = [
-  { path: 'urls', loadChildren: './url-list/url-list.module' }, // delay loading "url-list.module" module
-  { path: '**', redirectTo: 'urls' },
+  { path: '', loadChildren: './url-list/url-list.module', pathMatch: 'full' },
+  // { path: 'urls', loadChildren: './url-list/url-list.module', pathMatch: 'full' }, // delay loading "url-list.module" module
 ];
 
 @NgModule({

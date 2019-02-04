@@ -6,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '', component: UrlItemsComponent, pathMatch: 'full' },
-  { path: ':itemName', component: UrlItemComponent },
+  { path: ':name', component: UrlItemComponent  },
 ];
 
 @NgModule({
