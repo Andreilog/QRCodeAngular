@@ -1,3 +1,13 @@
 <p>
-  url-items works!
+  List of urls:
 </p>
+<ul>
+  <li *ngFor="let item of items">
+      <div class="tooltip">
+        <a routerLink="./{{item.title}}" (mouseover)="onMouseOver(item)">
+          {{item.title}}
+        </a>
+        <img class="tooltipImage" [src]="qrUrl"/>
+      </div>
+  </li>
+</ul>

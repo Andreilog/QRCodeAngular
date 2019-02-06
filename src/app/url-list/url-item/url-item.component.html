@@ -1,3 +1,14 @@
 <p>
-  url-item works!
+  Title: {{urlItem.title}}
+</p>
+<p>
+  Url: {{urlItem.url}}
+</p>
+<p>
+  QRCode:
+  <br>
+  <img [src]="qrUrl"/>
+</p>
+<p>
+  <button (click)="goBack()">Go back</button>
 </p>

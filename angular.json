@@ -7,7 +7,7 @@
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "app",
+      "prefix": "QR",
       "schematics": {
         "@schematics/angular:component": {
           "style": "sass"
@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "baseHref": ".",
             "outputPath": "dist/QRCodeList",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -62,7 +63,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "QRCodeList:build"
+            "browserTarget": "QRCodeList:build",
+            "port": 4200
           },
           "configurations": {
             "production": {
