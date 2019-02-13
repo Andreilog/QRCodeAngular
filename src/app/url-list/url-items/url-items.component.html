@@ -4,7 +4,7 @@
 <ul>
   <li *ngFor="let item of items">
       <div class="tooltip">
-        <a routerLink="./{{item.title}}" (mouseover)="onMouseOver(item)">
+        <a routerLink="./{{item.title}}" (mouseover)="onMouseOver(item, $event)" (mousemove)="onMouseOver(item, $event)">
           {{item.title}}
         </a>
         <img class="tooltipImage" [src]="qrUrl"/>

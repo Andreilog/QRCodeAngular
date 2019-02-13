@@ -25,7 +25,20 @@ export class UrlItemsComponent implements OnInit {
     });
   }
 
-  onMouseOver(item: UrlItemModel) {
-    this.qrUrl = `${this.service.url}/${item.title}`;
+  onMouseOver(item: UrlItemModel, event: MouseEvent) {
+    const newUrl = `${this.service.url}/${item.title}`;
+    if (this.qrUrl !== newUrl) {
+      this.qrUrl = `${this.service.url}/${item.title}`;
+    }
+
+    if (event.target) {
+      const elem = event.target as HTMLElement;
+      const parentDiv = elem.parentNode as HTMLDivElement;
+      const img = parentDiv.querySelector("img") as HTMLImageElement;
+      img.style.left = `${event.offsetX + 5}px`;
+      img.style.top = `${event.offsetY + 5}px`;
+    }
+
+    // console.log({offsetX: event.offsetX, offsetY: event.offsetY});
   }
 }

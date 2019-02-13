@@ -3,15 +3,13 @@
 .tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted red; /* If you want dots under the hoverable text */
 
   .tooltipImage {
+    box-sizing: content-box;
     visibility: hidden;
     width: 204px;
     height: 204px;
-    padding: 5px 0;
-
-    /* Position the tooltip text */
+    border: 1px solid black;
     position: absolute;
     z-index: 1;
   }
@@ -21,6 +19,5 @@
 .tooltip:hover {
   .tooltipImage {
     visibility: visible;
-    opacity: 1;
   }
 }
